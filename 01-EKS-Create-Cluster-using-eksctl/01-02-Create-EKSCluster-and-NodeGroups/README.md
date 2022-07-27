@@ -40,7 +40,7 @@ eksctl utils associate-iam-oidc-provider \
 # Replace with region & cluster name
 eksctl utils associate-iam-oidc-provider \
     --region us-east-1 \
-    --cluster eksdemo1 \
+    --cluster eksdemo2 \
     --approve
 ```
 
@@ -92,6 +92,9 @@ eksctl get cluster
 
 # List NodeGroups in a cluster
 eksctl get nodegroup --cluster=<clusterName>
+
+#Add Config map of our cluster tp local machine
+aws eks update-kubeconfig --region region-code --name cluster-name
 
 # List Nodes in current kubernetes cluster
 kubectl get nodes -o wide
