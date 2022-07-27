@@ -96,6 +96,8 @@ eksctl get nodegroup --cluster=<clusterName>
 #Add Config map of our cluster tp local machine
 aws eks update-kubeconfig --region region-code --name cluster-name
 
+#Ensure we are using latest version of awscli (awscli v2)
+
 # List Nodes in current kubernetes cluster
 kubectl get nodes -o wide
 
